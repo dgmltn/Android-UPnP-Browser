@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationContentDescription="@string/abc_action_bar_up_description"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="?attr/homeAsUpIndicator" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AppTheme.Settings.Header"
+                android:text="@string/app_name" />
+
+            <com.dgmltn.upnpbrowser.AboutRowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="?android:attr/scrollbarSize"
+                app:projectStr="@string/Android_UPnP_Browser"
+                app:projectUrl="@string/Android_UPnP_Browser_url"
+                app:avatar="@drawable/avatar_dgmltn"
+                app:description="@string/copyright_doug_melton"
+                app:linkStr="@string/apache_license"
+                app:linkUrl="@string/apache_license_url"
+                app:linkStr2="@string/twitter_dgmltn"
+                app:linkUrl2="@string/twitter_dgmltn_url"/>
+
+            <TextView
+                style="@style/AppTheme.Settings.Header"
+                android:text="@string/Open_Source"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="?android:attr/scrollbarSize"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/open_source_intro"/>
+
+            <com.dgmltn.upnpbrowser.AboutRowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="?android:attr/scrollbarSize"
+                app:avatar="@drawable/avatar_squareeng"
+                app:projectStr="@string/OkHttp"
+                app:projectUrl="@string/OkHttp_url"
+                app:projectStr2="@string/Picasso"
+                app:projectUrl2="@string/Picasso_url"
+                app:description="@string/copyright_square"
+                app:linkStr="@string/apache_license"
+                app:linkUrl="@string/apache_license_url"
+                app:linkStr2="@string/twitter_squareeng"
+                app:linkUrl2="@string/twitter_squareeng_url"/>
+
+            <com.dgmltn.upnpbrowser.AboutRowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="?android:attr/scrollbarSize"
+                app:avatar="@drawable/avatar_rx"
+                app:projectStr="@string/RxJava"
+                app:projectUrl="@string/RxJava_url"
+                app:description="@string/Copyright_Netflix"
+                app:linkStr="@string/apache_license"
+                app:linkUrl="@string/apache_license_url"
+                app:linkStr2="@string/twitter_rx"
+                app:linkUrl2="@string/twitter_rx_url"/>
+
+            <com.dgmltn.upnpbrowser.AboutRowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="?android:attr/scrollbarSize"
+                app:avatar="@drawable/avatar_jake_wharton"
+                app:projectStr="@string/Butter_Knife"
+                app:projectUrl="@string/Butter_Knife_url"
+                app:description="@string/Copyright_Jake_wharton"
+                app:linkStr="@string/apache_license"
+                app:linkUrl="@string/apache_license_url"
+                app:linkStr2="@string/twitter_jake_wharton"
+                app:linkUrl2="@string/twitter_jake_wharton_url"/>
+
+            <com.dgmltn.upnpbrowser.AboutRowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="?android:attr/scrollbarSize"
+                app:avatar="@drawable/avatar_templarian"
+                app:projectStr="@string/Material_Design_Icons"
+                app:projectUrl="@string/Material_Design_Icons_url"
+                app:description="@string/Copyright_material_design_icons"
+                app:linkStr="@string/github_material_design"
+                app:linkUrl="@string/github_material_design_url"
+                app:linkStr2="@string/twitter_templarian"
+                app:linkUrl2="@string/twitter_templarian_url"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

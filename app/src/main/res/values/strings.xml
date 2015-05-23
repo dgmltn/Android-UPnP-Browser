@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">UPnP Browser</string>
+    <string name="action_info">Information</string>
+
+    <!-- Info -->
+    <string name="Android_UPnP_Browser">Android UPnP Browser</string>
+    <string name="Android_UPnP_Browser_url">https://github.com/dgmltn/Android-UPnP-Browser</string>
+    <string name="copyright_doug_melton">Copyright © 2015 Doug Melton</string>
+    <string name="twitter_dgmltn">\@dgmltn</string>
+    <string name="twitter_dgmltn_url">http://www.twitter.com/dgmltn</string>
+
+    <string name="Open_Source">Open Source</string>
+    <string name="open_source_intro">This app is built upon great open source software.</string>
+
+    <string name="OkHttp">OkHttp</string>
+    <string name="OkHttp_url">http://square.github.io/okhttp/</string>
+    <string name="Picasso">Picasso</string>
+    <string name="Picasso_url">http://square.github.io/picasso/</string>
+    <string name="copyright_square">Copyright © 2013-15 Square, Inc.</string>
+    <string name="twitter_squareeng">\@SquareEng</string>
+    <string name="twitter_squareeng_url">http://www.twitter.com/squareeng</string>
+
+    <string name="Butter_Knife">Butter Knife</string>
+    <string name="Butter_Knife_url">http://jakewharton.github.io/butterknife/</string>
+    <string name="Copyright_Jake_wharton">Copyright © 2013 Jake Wharton</string>
+    <string name="twitter_jake_wharton">\@JakeWharton</string>
+    <string name="twitter_jake_wharton_url">https://twitter.com/jakewharton</string>
+
+    <string name="RxJava">RxJava</string>
+    <string name="RxJava_url">https://github.com/ReactiveX/RxJava</string>
+    <string name="Copyright_Netflix">Copyright © 2013 Netflix, Inc.</string>
+    <string name="twitter_rx">\@RxJava</string>
+    <string name="twitter_rx_url">https://twitter.com/rxjava</string>
+
+    <string name="Material_Design_Icons">Material Design Icons</string>
+    <string name="Material_Design_Icons_url">http://materialdesignicons.com/</string>
+    <string name="Copyright_material_design_icons">Various copyrights, see GitHub</string>
+    <string name="github_material_design">GitHub repository</string>
+    <string name="github_material_design_url">https://github.com/Templarian/MaterialDesign</string>
+    <string name="twitter_templarian">\@Templarian</string>
+    <string name="twitter_templarian_url">https://twitter.com/Templarian</string>
+
+    <string name="apache_license">Apache License, Version 2.0</string>
+    <string name="apache_license_url">http://www.apache.org/licenses/LICENSE-2.0</string>
+
+</resources>

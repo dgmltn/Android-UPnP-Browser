@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AboutRowLayout">
+        <attr name="avatar" format="reference"/>
+        <attr name="projectStr" format="string"/>
+        <attr name="projectUrl" format="string"/>
+        <attr name="projectStr2" format="string"/>
+        <attr name="projectUrl2" format="string"/>
+        <attr name="projectStr3" format="string"/>
+        <attr name="projectUrl3" format="string"/>
+        <attr name="description" format="string"/>
+        <attr name="linkStr" format="string"/>
+        <attr name="linkUrl" format="string"/>
+        <attr name="linkStr2" format="string"/>
+        <attr name="linkUrl2" format="string"/>
+    </declare-styleable>
+
+</resources>
