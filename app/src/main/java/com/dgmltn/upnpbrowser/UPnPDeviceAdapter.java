@@ -102,14 +102,18 @@ public class UPnPDeviceAdapter extends RecyclerView.Adapter<UPnPDeviceAdapter.Vi
 	public void onBindViewHolder(ViewHolder holder, int position) {
 		UPnPDevice item = getItem(position);
 		if (holder.friendlyName != null) {
-			String friendlyName = item.getFriendlyName();
+			String friendlyName = item.getScrubbedFriendlyName();
 			if (TextUtils.isEmpty(friendlyName)) {
 				friendlyName = "[unnamed]";
 			}
 			holder.friendlyName.setText(friendlyName);
 		}
 		if (holder.location != null) {
-			linkify(holder.location, null, item.getLocation().toExternalForm());
+			String loc = item.getLocation().toExternalForm()
+				// Uncomment to obscure actual ip addresses for screenshots
+				// .replaceAll("[0-9]+\\.[0-9]+\\.[0-9]+", "192.258.1")
+				;
+			linkify(holder.location, null, loc);
 		}
 		if (holder.icon != null) {
 			if (!TextUtils.isEmpty(item.getIconUrl())) {

@@ -95,7 +95,20 @@ public class UPnPDevice {
 	}
 
 	public String getFriendlyName() {
-		return mProperties.get("xml_friendly_name");
+		String friendlyName = mProperties.get("xml_friendly_name");
+		return friendlyName;
+	}
+
+	public String getScrubbedFriendlyName() {
+		String friendlyName = mProperties.get("xml_friendly_name");
+
+		// Special case for SONOS: remove the leading ip address from the friendly name
+		// "192.168.1.123 - Sonos PLAY:1" => "Sonos PLAY:1"
+		if (friendlyName.startsWith(getHost() + " - ")) {
+			friendlyName = friendlyName.substring(getHost().length() + 3);
+		}
+
+		return friendlyName;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
