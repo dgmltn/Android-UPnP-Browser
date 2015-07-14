@@ -104,7 +104,7 @@ public class UPnPDevice {
 
 		// Special case for SONOS: remove the leading ip address from the friendly name
 		// "192.168.1.123 - Sonos PLAY:1" => "Sonos PLAY:1"
-		if (friendlyName.startsWith(getHost() + " - ")) {
+		if (friendlyName != null && friendlyName.startsWith(getHost() + " - ")) {
 			friendlyName = friendlyName.substring(getHost().length() + 3);
 		}
 
