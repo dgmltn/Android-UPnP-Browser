@@ -23,6 +23,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -40,6 +43,9 @@ public class MainActivity extends ActionBarActivity {
 	@InjectView(R.id.recycler)
 	protected RecyclerView vRecycler;
 
+	@InjectView(R.id.spinner)
+	protected View vSpinner;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,7 +55,8 @@ public class MainActivity extends ActionBarActivity {
 		mAdapter = new UPnPDeviceAdapter(this);
 		vRecycler.setAdapter(mAdapter);
 		vRecycler.setLayoutManager(new LinearLayoutManager(this));
-
+		vRecycler.setVisibility(View.INVISIBLE);
+		vSpinner.setVisibility(View.VISIBLE);
 	}
 
 	@Override
@@ -75,6 +82,24 @@ public class MainActivity extends ActionBarActivity {
 			.subscribe(new Action1<UPnPDevice>() {
 				@Override
 				public void call(UPnPDevice device) {
+					// This is the first device found.
+					if (mAdapter.getItemCount() == 0) {
+						vSpinner.animate()
+							.alpha(0f)
+							.setDuration(1000)
+							.setInterpolator(new AccelerateInterpolator())
+							.start();
+
+						vRecycler.setAlpha(0f);
+						vRecycler.setVisibility(View.VISIBLE);
+						vRecycler.animate()
+							.alpha(1f)
+							.setDuration(1000)
+							.setStartDelay(1000)
+							.setInterpolator(new DecelerateInterpolator())
+							.start();
+					}
+
 					mAdapter.add(device);
 				}
 			});
