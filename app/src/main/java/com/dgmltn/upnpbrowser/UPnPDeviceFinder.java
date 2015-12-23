@@ -25,8 +25,7 @@ import java.net.NetworkInterface;
 import java.net.SocketAddress;
 import java.util.Collections;
 import java.util.List;
-
-import org.apache.http.conn.util.InetAddressUtils;
+import java.util.regex.Pattern;
 
 import android.util.Log;
 
@@ -184,7 +183,7 @@ public class UPnPDeviceFinder {
 					if (!addr.isLoopbackAddress()) {
 						Log.e(TAG, "IP from inet is: " + addr);
 						String sAddr = addr.getHostAddress().toUpperCase();
-						boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);
+						boolean isIPv4 = isIPv4Address(sAddr);
 						if (useIPv4) {
 							if (isIPv4) {
 								Log.e(TAG, "IP v4");
@@ -208,4 +207,12 @@ public class UPnPDeviceFinder {
 		return null;
 	}
 
+	// From Apache InetAddressUtils
+	// https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/conn/util/InetAddressUtils.html
+	private static final Pattern IPV4_PATTERN =
+		Pattern.compile("^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$");
+
+	private static final boolean isIPv4Address(final String input) {
+		return IPV4_PATTERN.matcher(input).matches();
+	}
 }

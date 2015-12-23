@@ -33,24 +33,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class AboutRowLayout extends LinearLayout {
 
-	@InjectView(R.id.avatar)
+	@Bind(R.id.avatar)
 	ImageView vAvatar;
 
-	@InjectView(R.id.project)
+	@Bind(R.id.project)
 	TextView vProject;
 
-	@InjectView(R.id.description)
+	@Bind(R.id.description)
 	TextView vDescription;
 
-	@InjectView(R.id.link1)
+	@Bind(R.id.link1)
 	TextView vLink1;
 
-	@InjectView(R.id.link2)
+	@Bind(R.id.link2)
 	TextView vLink2;
 
 	public AboutRowLayout(Context context) {
@@ -95,7 +95,7 @@ public class AboutRowLayout extends LinearLayout {
 		LayoutInflater inflater = LayoutInflater.from(context);
 		inflater.inflate(R.layout.row_about, this, true);
 
-		ButterKnife.inject(this);
+		ButterKnife.bind(this);
 
 		vAvatar.setVisibility(src == null ? View.GONE : View.VISIBLE);
 		vAvatar.setImageDrawable(src);

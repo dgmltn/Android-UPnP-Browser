@@ -21,11 +21,11 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.URLSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,10 +34,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
-import butterknife.Optional;
 
 public class UPnPDeviceAdapter extends RecyclerView.Adapter<UPnPDeviceAdapter.ViewHolder> {
 
@@ -154,21 +153,21 @@ public class UPnPDeviceAdapter extends RecyclerView.Adapter<UPnPDeviceAdapter.Vi
 	}
 
 	class ViewHolder extends RecyclerView.ViewHolder {
-		@InjectView(R.id.icon)
-		@Optional
+		@Bind(R.id.icon)
+		@Nullable
 		ImageView icon;
 
-		@InjectView(R.id.friendly_name)
-		@Optional
+		@Bind(R.id.friendly_name)
+		@Nullable
 		TextView friendlyName;
 
-		@InjectView(R.id.location)
-		@Optional
+		@Bind(R.id.location)
+		@Nullable
 		TextView location;
 
 		public ViewHolder(View view) {
 			super(view);
-			ButterKnife.inject(this, view);
+			ButterKnife.bind(this, view);
 		}
 
 		@OnClick(R.id.root)

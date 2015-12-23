@@ -27,8 +27,8 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
@@ -40,17 +40,17 @@ public class MainActivity extends ActionBarActivity {
 
 	UPnPDeviceAdapter mAdapter;
 
-	@InjectView(R.id.recycler)
+	@Bind(R.id.recycler)
 	protected RecyclerView vRecycler;
 
-	@InjectView(R.id.spinner)
+	@Bind(R.id.spinner)
 	protected View vSpinner;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		ButterKnife.inject(this);
+		ButterKnife.bind(this);
 
 		mAdapter = new UPnPDeviceAdapter(this);
 		vRecycler.setAdapter(mAdapter);

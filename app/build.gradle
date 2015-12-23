@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.dgmltn.upnpbrowser"
         minSdkVersion 21
-        targetSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -21,15 +21,21 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.0.0'
-    compile 'com.android.support:recyclerview-v7:22.0.0'
-    compile 'com.android.support:cardview-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
 
-    compile 'com.jakewharton:butterknife:6.1.0'
+    // http://jakewharton.github.io/butterknife
+    compile 'com.jakewharton:butterknife:7.0.1'
 
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
-    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    // http://square.github.io/okhttp
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.7.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.0'
+
+    // http://square.github.io/picasso
     compile 'com.squareup.picasso:picasso:2.5.2'
 
-    compile 'io.reactivex:rxandroid:0.24.0'
+    // https://github.com/ReactiveX/RxAndroid
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
 }
